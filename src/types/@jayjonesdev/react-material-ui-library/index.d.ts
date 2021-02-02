@@ -1,0 +1,1 @@
+declare module '@jayjonesdev/react-material-ui-library';
