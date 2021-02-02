@@ -1,7 +1,8 @@
 import React from 'react';
 import { Appbar } from '@jayjonesdev/react-material-ui-library';
-import { makeStyles, Typography, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import countService from '../../services/count.service';
+import { Card } from '../basic';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
         boxSizing: 'border-box'
     },
     data: {
+        display: 'flex',
         padding: theme.spacing(2)
     }
 }));
@@ -42,8 +44,7 @@ export default () => {
             <main className={classes.content}>
                 <div className={classes.toolbar} />
                 <div className={classes.data}>
-                    <Typography variant="h6"><b>Hit Count:</b> {hitCount}</Typography>
-                    <Button variant="contained" color="primary" onClick={hit}>Hit</Button>
+                    <Card title="Hit Count" subtitle="fearless.tech/" content={hitCount} onClick={hit} buttonText="Hit" />
                 </div>
             </main>
         </div>
